@@ -19,6 +19,7 @@ class AuthStore {
         try {
             const response = await authApi.login(credentials);
             runInAction(() => {
+                //TODO
                 this.user = response.data.user;
                 this.isAuthenticated = true;
                 localStorage.setItem('accessToken', response.data.token);

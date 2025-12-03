@@ -7,7 +7,7 @@ const LoginForm = observer(() => {
     const { authStore } = useStore();
     const navigate = useNavigate();
     const [credentials, setCredentials] = useState({
-        username: '',
+        userId: '',
         password: ''
     });
 
@@ -24,8 +24,8 @@ const LoginForm = observer(() => {
             <input
                 type="text"
                 placeholder="아이디"
-                value={credentials.username}
-                onChange={(e) => setCredentials({...credentials, username: e.target.value})}
+                value={credentials.userId}
+                onChange={(e) => setCredentials({...credentials, userId: e.target.value})}
             />
             <input
                 type="password"
